@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Update</title>
 	<script>
+		/* Make sure ID is filled out */
 function validateForm() 
 		{
 var patrolCarId = document.forms["form1"]["patrolCarId"].value;
@@ -14,6 +15,7 @@ var patrolCarId = document.forms["form1"]["patrolCarId"].value;
 		}		
 	</script>
 <?php
+	// connect to database , select data from database , update database data
 	if(isset($_SESSION)==false){
     session_start();}
     if(!isset($_SESSION['username'])) {
@@ -92,6 +94,7 @@ var patrolCarId = document.forms["form1"]["patrolCarId"].value;
 	include "header.php";
 	if(!isset($_POST["btnSearch"])){	
 ?>
+	<!-- create a form and a table  -->
 <fieldset>
 <legend><h1>Update Patrol Care</h1></legend>
 <form name="form1" onsubmit="return validateForm()" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>">

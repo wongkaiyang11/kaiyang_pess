@@ -4,6 +4,7 @@
 <title>PESS</title>
 	
 <script>
+	// make sure each line is filled out and not empty 
 	function validateForm() {
 	  var callerName = document.forms["frmLogCall"]["callerName"].value;
 	  var contactNum = document.forms["frmLogCall"]["contactNum"].value;
@@ -32,6 +33,7 @@
 
 <body>
 <?php
+	/* Connect to database , Get data from database */
 	if(isset($_SESSION)==false)
     session_start();
     if(!isset($_SESSION['username'])) {
@@ -80,7 +82,7 @@
 <form name="frmLogCall" onsubmit="return validateForm()" method="post" action="Dispatch.php">
 	<fieldset>
 		<legend><h1>Log Call</h1></legend>
-		
+<!-- Display Tables and buttons -->		
  <table>
 	  <tr>
 		   <td align="left">Caller's Name:</td> 

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Sign in</title>
 <script>
+	// make sure username and password is not empty 
 	function validateForm1() {
 	  var username = document.forms["frmLogCall1"]["username"].value;
 	  var pass = document.forms["frmLogCall1"]["pass"].value;	
@@ -21,6 +22,7 @@
 </head>
 
 <body>
+	<!-- if there is a session then proceed to logcall.php if there isnt, create a new session , check if username and password exist in the database if it doesnt then display "Invalid Login" -->
 <?php include "header.php"; ?>
 	
 <?php

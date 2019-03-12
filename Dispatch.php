@@ -1,4 +1,5 @@
 <?php 
+// make sure people cant access this page instantly
     if (!isset($_POST['btnProcessCall'])){
            header("Location: logcall.php");
 	}
@@ -9,7 +10,7 @@
 <meta charset="utf-8">
 <title>Dispatch Patrol Care</title>
 <?php
-	
+	// connect to database  
 	if(isset($_POST["btnSubmit"])) 
 	{
 		//connect to database
